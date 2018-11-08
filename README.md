@@ -1,24 +1,15 @@
-# README
+# MOVIE SEARCHER  
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Bienvenue sur MOVIE SEARCHER. 
 
-Things you may want to cover:
+## La team
+@Charlotte, @Emilie, @MattMonta, @Jojo, @Elmousski 
 
-* Ruby version
+### Comment ca marche ? 
 
-* System dependencies
+1. Clone le repository et mets toi dedans
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+2. Install all the gems
+```sh
+bundle install
+```
