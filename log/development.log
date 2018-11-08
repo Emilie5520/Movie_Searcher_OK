@@ -1,0 +1,369 @@
+  [1m[35m (500.2ms)[0m  [1m[35mCREATE DATABASE "Movie_Searcher_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (404.1ms)[0m  [1m[35mCREATE DATABASE "Movie_Searcher_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (48.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (50.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2994277402599828450)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-11-08 13:01:40.474746"], ["updated_at", "2018-11-08 13:01:40.474746"]]
+  ↳ bin/rails:9
+  [1m[35m (40.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(2994277402599828450)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for 127.0.0.1 at 2018-11-08 14:01:46 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (66.0ms)
+Completed 200 OK in 826ms (Views: 815.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/" for 127.0.0.1 at 2018-11-08 14:01:54 +0100
+Processing by MoviesController#result as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ePiVKLzwm3CMZjergolsptrWyCb/dhZOfmzXzPDWfg00r3+KYrzKHvJHz6p7LDT5wP22cWHV33so5PKlu+LeAQ==", "movie"=>{"search"=>"sss"}, "commit"=>"Search"}
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant SearchMovie::Tmdb):
+  
+app/services /search_movie.rb:8:in `log_in'
+app/services /search_movie.rb:12:in `result'
+app/controllers/movies_controller.rb:13:in `result'
+Started GET "/" for 127.0.0.1 at 2018-11-08 14:15:36 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 228ms (Views: 221.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/" for 127.0.0.1 at 2018-11-08 14:15:38 +0100
+Processing by MoviesController#result as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eej3qRtCvrYoLsw71rySHwHQWKxq+8Kor/qxnb3fKSU1vx0LxQ7v2FYPNDovGcpAG/sm+/RYC535cpT09uuJKQ==", "movie"=>{"search"=>"s"}, "commit"=>"Search"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant SearchMovie::Tmdb):
+  
+app/services /search_movie.rb:8:in `log_in'
+app/services /search_movie.rb:12:in `result'
+app/controllers/movies_controller.rb:13:in `result'
+Started GET "/" for 127.0.0.1 at 2018-11-08 14:21:49 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 1201ms (Views: 1194.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/" for 127.0.0.1 at 2018-11-08 14:21:52 +0100
+Processing by MoviesController#result as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iVFEsvqlvOWEqZDmib7xJ/6DOeDtWmwfKF7f/PuW9bPFBq4QJOnti/qIaOdwG6l45KhHt3P5pSp+1vqVsKJVvw==", "movie"=>{"search"=>"s"}, "commit"=>"Search"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant SearchMovie::Tmdb):
+  
+app/services /search_movie.rb:8:in `log_in'
+app/services /search_movie.rb:12:in `result'
+app/controllers/movies_controller.rb:13:in `result'
+Started GET "/" for 127.0.0.1 at 2018-11-08 14:35:30 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 266ms (Views: 258.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/" for 127.0.0.1 at 2018-11-08 14:35:35 +0100
+Processing by MoviesController#result as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+yIMI83VPUQeMx0WOMV9CLViZZLh+61J2bk0wj7pJsq3deaBE5lsKmAS5RfBYCVXr0kbxX9YZHyPMRGrdd2Gxg==", "movie"=>{"search"=>"zz"}, "commit"=>"Search"}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant SearchMovie::Tmdb):
+  
+app/services /search_movie.rb:8:in `log_in'
+app/services /search_movie.rb:12:in `result'
+app/controllers/movies_controller.rb:13:in `result'
+Started GET "/" for 127.0.0.1 at 2018-11-08 15:37:41 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 300ms (Views: 290.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/" for 127.0.0.1 at 2018-11-08 15:37:43 +0100
+Processing by MoviesController#result as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jrb58R0mbho2CbT9pLwmsn0Nkx2LAlDyTkDaZd4ooELC4RNTw2o/dEgoTPxdGX7tZybtShWhmccYyP8MlRwATg==", "movie"=>{"search"=>""}, "commit"=>"Search"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-08 15:37:43 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 24ms (Views: 21.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/" for 127.0.0.1 at 2018-11-08 15:37:45 +0100
+Processing by MoviesController#result as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"23PN6Fcx9Et3vooz1B3iehBXtVW2emnCtVJipSuThs6XJCdKiX2lJQmfcjItuLolCnzLAijZoPfj2kfMYKcmwg==", "movie"=>{"search"=>"xxxx"}, "commit"=>"Search"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant SearchMovie::Tmdb):
+  
+app/services /search_movie.rb:8:in `log_in'
+app/services /search_movie.rb:12:in `result'
+app/controllers/movies_controller.rb:13:in `result'
+Started GET "/" for 127.0.0.1 at 2018-11-08 15:42:56 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 28ms (Views: 23.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-08 15:45:52 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 277ms (Views: 269.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/" for 127.0.0.1 at 2018-11-08 15:45:54 +0100
+Processing by MoviesController#result as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Oo/upmAI7MSVPBx3+PUTN1alkhhUeiu5JN0TIOoK1ZV22AQEvkS9qusd5HYBUEtoTI7sT8rZ4oxyVTZJoT51mQ==", "movie"=>{"search"=>"ss"}, "commit"=>"Search"}
+Completed 500 Internal Server Error in 225ms (ActiveRecord: 0.0ms)
+
+
+  
+Tmdb::InvalidApiKeyError (Tmdb::InvalidApiKeyError):
+  
+app/services /search_movie.rb:14:in `result'
+app/controllers/movies_controller.rb:13:in `result'
+Started GET "/" for 127.0.0.1 at 2018-11-08 15:59:29 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 24ms (Views: 21.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/" for 127.0.0.1 at 2018-11-08 15:59:34 +0100
+Processing by MoviesController#result as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DDoZ3J4ASm3S+BeDrpZ5f5FSbhxq3C/Uv5zhZUEsD4BAbfN+QEwbA6zZ74JXMyEgi3kQS/R/5uHpFMQMChivjA==", "movie"=>{"search"=>"s"}, "commit"=>"Search"}
+Completed 500 Internal Server Error in 254ms (ActiveRecord: 0.0ms)
+
+
+  
+Tmdb::InvalidApiKeyError (Tmdb::InvalidApiKeyError):
+  
+app/services /search_movie.rb:14:in `result'
+app/controllers/movies_controller.rb:13:in `result'
+Started GET "/" for 127.0.0.1 at 2018-11-08 16:12:50 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 282ms (Views: 276.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/" for 127.0.0.1 at 2018-11-08 16:12:51 +0100
+Processing by MoviesController#result as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VhA/Mixf7JL8KzJx0PpAQd8EQ91cc0+qI5v8JsxHpMcaR9WQ8hO9/IIKynApXxgexS89isLQhp91E9lPh3MEyw==", "movie"=>{"search"=>""}, "commit"=>"Search"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-08 16:12:51 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 25ms (Views: 23.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/" for 127.0.0.1 at 2018-11-08 16:12:52 +0100
+Processing by MoviesController#result as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mrp1xfFLCzED/EohpODQW60WVLbK/pdGy9azGUKZREPW7Z9nLwdaX33dsiBdRYgEtz0q4VRdXnOdXpZwCa3kTw==", "movie"=>{"search"=>"xx"}, "commit"=>"Search"}
+Completed 500 Internal Server Error in 372ms (ActiveRecord: 0.0ms)
+
+
+  
+Tmdb::InvalidApiKeyError (Tmdb::InvalidApiKeyError):
+  
+app/services /search_movie.rb:16:in `result'
+app/controllers/movies_controller.rb:13:in `result'
+Started GET "/" for 127.0.0.1 at 2018-11-08 16:13:19 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 32ms (Views: 28.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/" for 127.0.0.1 at 2018-11-08 16:13:21 +0100
+Processing by MoviesController#result as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vvuY8IgyV92ej6tzIdgJpVYW9zAVkkU0RGqSEdn7J9DyrHJSVn4Gs+CuU3LYfVH6TD2JZ4sxjAES4rd4ks+H3A==", "movie"=>{"search"=>"d"}, "commit"=>"Search"}
+Completed 500 Internal Server Error in 291ms (ActiveRecord: 0.0ms)
+
+
+  
+Tmdb::InvalidApiKeyError (Tmdb::InvalidApiKeyError):
+  
+app/services /search_movie.rb:16:in `result'
+app/controllers/movies_controller.rb:13:in `result'
+Started GET "/" for 127.0.0.1 at 2018-11-08 16:13:29 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 34ms (Views: 30.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/" for 127.0.0.1 at 2018-11-08 16:13:31 +0100
+Processing by MoviesController#result as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"prpYeZn4kBC7Hhu2P8WldQ8TmzJsPQUN+2wpD7i7mcLq7bLbR7TBfsU/47fGYP0qFTjlZfKezDit5Axm8485zg==", "movie"=>{"search"=>"x"}, "commit"=>"Search"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/emilie/Documents/Movie_Searcher/app/services /search_movie.rb:17: syntax error, unexpected keyword_end
+    end
+    ^~~):
+  
+app/services /search_movie.rb:17: syntax error, unexpected keyword_end
+app/controllers/movies_controller.rb:9:in `result'
+Started GET "/" for 127.0.0.1 at 2018-11-08 16:13:39 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 25ms (Views: 22.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/" for 127.0.0.1 at 2018-11-08 16:13:41 +0100
+Processing by MoviesController#result as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uR6RW6vgyUqOnFtB1R/cYnG4uFKxfIQUloUezzZOEWf1SXv5dayYJPC9o0AsuoQ9a5PGBS/fTSHADTumfXqxaw==", "movie"=>{"search"=>"c"}, "commit"=>"Search"}
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/emilie/Documents/Movie_Searcher/app/services /search_movie.rb:18: syntax error, unexpected keyword_end
+  end
+  ^~~):
+  
+app/services /search_movie.rb:18: syntax error, unexpected keyword_end
+app/controllers/movies_controller.rb:9:in `result'
+Started GET "/" for 127.0.0.1 at 2018-11-08 16:14:59 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 23ms (Views: 20.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/" for 127.0.0.1 at 2018-11-08 16:15:01 +0100
+Processing by MoviesController#result as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8KfOshkLite4C5D6BnGCWXiIHL6BTLMIh8hWNeP2yle88CQQx0fbucYqaPv/1NoGYqNi6R/vej3RQHNcqMJqWw==", "movie"=>{"search"=>"h"}, "commit"=>"Search"}
+Completed 500 Internal Server Error in 334ms (ActiveRecord: 0.0ms)
+
+
+  
+Tmdb::InvalidApiKeyError (Tmdb::InvalidApiKeyError):
+  
+app/services /search_movie.rb:16:in `result'
+app/controllers/movies_controller.rb:13:in `result'
+Started GET "/" for 127.0.0.1 at 2018-11-08 16:16:44 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 23ms (Views: 19.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/" for 127.0.0.1 at 2018-11-08 16:16:46 +0100
+Processing by MoviesController#result as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"159Bl61xvXssGA6Ibs83JiCe03TsoC86Oi/Z9KlFRRGbyKs1cz3sFVI59omXam95OrWtI3ID5g9sp/yd4nHlHQ==", "movie"=>{"search"=>"h"}, "commit"=>"Search"}
+Completed 500 Internal Server Error in 324ms (ActiveRecord: 0.0ms)
+
+
+  
+Tmdb::InvalidApiKeyError (Tmdb::InvalidApiKeyError):
+  
+app/services /search_movie.rb:17:in `result'
+app/controllers/movies_controller.rb:13:in `result'
+Started GET "/" for 127.0.0.1 at 2018-11-08 16:26:14 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 278ms (Views: 272.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/" for 127.0.0.1 at 2018-11-08 16:26:17 +0100
+Processing by MoviesController#result as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"k2xSRsi8d2LbwhYJzc2dSEWDv9K/GJmYCPyh0Eyb4j7fO7jkFvAmDKXj7gg0aMUXX6jBhSG7UK1edIS5B69CMg==", "movie"=>{"search"=>"j"}, "commit"=>"Search"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+LoadError (cannot load such file -- themovie):
+  
+app/services /search_movie.rb:1:in `<main>'
+app/controllers/movies_controller.rb:9:in `result'
+Started GET "/" for 127.0.0.1 at 2018-11-08 16:26:25 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 24ms (Views: 21.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/" for 127.0.0.1 at 2018-11-08 16:26:37 +0100
+Processing by MoviesController#result as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pTVKvS8EAMwkdIisW85AeCXOMO8kQ8SpbTY9Uw+HKRLpYqAf8UhRolpVcK2iaxgnP+VOuLrgDZw7vhg6RLOJHg==", "movie"=>{"search"=>"j"}, "commit"=>"Search"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 597ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-08 16:26:38 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 37ms (Views: 34.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-08 16:28:59 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 41ms (Views: 36.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-08 16:29:41 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 22ms (Views: 18.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/" for 127.0.0.1 at 2018-11-08 16:29:57 +0100
+Processing by MoviesController#result as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0AUXIgZWiZpocI4e8xT6JE15o6ng7F4BW/NNxUa5BqecUv2A2BrY9BZRdh8KsaJ7V1Ld/n5PlzQNe2isDY2mqw==", "movie"=>{"search"=>"117"}, "commit"=>"Search"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 547ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-08 16:29:57 +0100
+Processing by MoviesController#search as HTML
+  Rendering movies/search.html.erb within layouts/application
+  Rendered movies/search.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 24ms (Views: 20.8ms | ActiveRecord: 0.0ms)
+
+

@@ -1,0 +1,39 @@
+<center><section class="jumbotron text-center">
+  <div class="container">
+    <p class="lead text-muted">
+      <%= form_for :movie, url: root_path do |f| %>
+      <%= f.text_field :search , class: "form-control"%>
+      <%= f.submit "Search" , class: "btn btn-sm btn-primary my-2"%>
+    <% end %>
+
+  </p>
+</div>
+</section>
+<div class="row">
+
+  <% if !$display.nil? %>
+    <% $display.each do |result| %>
+
+
+      <div class="col-md-4">
+        <div class="card mb-4 box-shadow">
+          <% if result.poster_path %>
+            <%= image_tag result.poster_path, class:"card-img-top"%>
+            <% end %>
+          <div class="card-body">
+            <p class="card-text"><%= result.original_title%></p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+              </div>
+              <small class="text-muted"><%= result.release_date%></small>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+
+</div>
+</center>
